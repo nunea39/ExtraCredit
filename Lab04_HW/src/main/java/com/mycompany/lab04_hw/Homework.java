@@ -44,5 +44,33 @@ public class Homework {
         return cnt; // returns the sum of multiples of 7
     }
     
+    /**
+     * Function implements binary search recursively
+     * 
+     * @param arr the array for the function to search
+     * @param start int to set boundary for left index
+     * @param end int to set boundary for right index
+     * @param x int the function will search for
+     * @return returns -1 if we cant find int x or the index where int x was found
+     */
+    int binarySearch (int arr[], int start, int end, int search){
+        
+        if(start <= end){
+            
+            int middle = (start + end) / 2; 
+            
+            if(arr[middle] == search){ // base case
+                return middle;
+            }
+            if (arr[middle] > search){ // will recursively run the function and change the right index to the middle -1
+                return binarySearch(arr, start, middle -1, search);
+            }
+            if (arr[middle] < search){  // will recursively run the function and change the left index to start in the middle 
+                return binarySearch(arr, middle +1, end, search);
+            }
+                            
+        }
+        return -1; // if the element is not found in the array 
+    }
     
 }
