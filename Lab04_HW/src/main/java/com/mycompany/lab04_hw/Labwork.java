@@ -23,9 +23,8 @@ public class Labwork {
         System.out.println("\n");
         
         hw1.helloWorld(10);
-        
+
+        System.out.println("Sum of multiples of 7 : " + Homework.countMultiples(36,77));
        
     }
-    
-
 }

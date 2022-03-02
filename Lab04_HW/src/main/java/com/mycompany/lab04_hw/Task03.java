@@ -25,7 +25,7 @@ public class Task03 {
 
        else
 
-             return fib(n – 1) + fib(n – 2); 
+             return -1; // fib(n – 1) + fib(n – 2); 
 
 }
     
